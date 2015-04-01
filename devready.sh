@@ -7,7 +7,8 @@
 cd /var/www/magento.holding/; git init; git pull
 
 
-### For dev database
+### Workaround for lame bitbucket hooks
+
 
 COMMITCHECK=$(cd /var/www/magento.holding/; git fetch; git log | head -1 | grep $(cat /var/www/magento/.git/commitcheck) >/dev/null && echo 1 || echo 0)
 
